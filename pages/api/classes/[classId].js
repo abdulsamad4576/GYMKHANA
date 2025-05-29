@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: "Invalid class ID" });
   }
 
-  const client = await MongoClient.connect("mongodb+srv://talmaj2173:rXDInYAS0pKckoPH@c.q8asa.mongodb.net/?retryWrites=true&w=majority&appName=c");
+  const client = await MongoClient.connect("ENV_URL");
   const db = client.db("gym_db");
 
   try {
