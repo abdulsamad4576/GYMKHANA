@@ -4,7 +4,7 @@ import { MongoClient } from "mongodb";
 import { compare } from "bcryptjs";
 
 async function connectDb() {
-  const client = await MongoClient.connect("mongodb+srv://talmaj2173:rXDInYAS0pKckoPH@c.q8asa.mongodb.net/?retryWrites=true&w=majority&appName=c");
+  const client = await MongoClient.connect("ENV_URL");
   return client.db("gym_db");
 }
 
